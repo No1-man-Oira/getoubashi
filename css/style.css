@@ -1,0 +1,82 @@
+a.navbar-item.is-active {
+  background-color: darkcyan;
+}
+
+a.navbar-item:hover {
+    background-color: darkcyan;
+    /* color: #3273dc; */
+}
+
+.navbar-burger span {
+    height: 4px;
+    left: calc(50% - 40px);
+    width: 40px;
+    zoom: 2;
+}
+
+.navbar-burger span:nth-child(1) {
+top: calc(50% - 0px);
+}
+
+.navbar-burger span:nth-child(2) {
+top: calc(50% - -10px);
+}
+
+.navbar-burger span:nth-child(3) {
+    top: calc(50% + 20px);
+}
+
+.navbar-item {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar-item {
+    font-size: 8rem;
+  }
+
+  .navbar-menu {
+    height: 100%;
+    background-color: rgb(105, 200, 205, 0.5);
+    box-shadow: 0 8px 16px rgba(10, 10, 10,.1);
+    padding:.5rem 0;
+  }
+
+  .navbar-menu.is-active {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.content1 {
+  /*  */
+}
+
+.content2 {
+  background: rgb(0,0,0, 0.2);
+}
+
+.content2h1, .content2h2 {
+  font-size: 8rem;
+}
+
+.volumebar {
+  margin-bottom: 10px;
+}
+
+.input-range[type=range] {
+  -webkit-appearance: none;
+
+  appearance: none;
+  background-color: #c7c7c7;
+  height: 2px;
+}
+.input-range[type=range]:focus, .input-range[type=range]:active {
+  outline: none;
+}
+
+.volumebar {
+  position: absolute;
+  bottom: -2px;
+  right: 24px;
+}
