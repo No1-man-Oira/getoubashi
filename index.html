@@ -6,51 +6,19 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <script src="./js/api.js"></script>
+  <script src="./js/soundcloudAPI.js"></script>
 </head>
 <body>
-  <section
-    class="hero is-medium content1"
-    style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-      url('./bokeh-large-background-1680-1050.png');"
-  >
-    <script src="js/parts/heroHead.js"></script>
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <!-- <h1 class="title has-text-white">
-          aaaa
-        </h1>
-        <h2 class="subtitle has-text-white">
-          bbbb
-        </h2> -->
-        <div class="volumebar">
-          Volume <br>
-          0 <input id="volume" class="input-range" type="range" name="range" value="25" data-unit="%"> 100
-        </div>
-        <iframe id="sound" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/971590474&color=%23130a1a&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-      </div>
-    </div>
-    <script src="js/script.js"></script>
-  </section>
-
-  <section
-    class="hero is-medium content2"
-    style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-        url('./purple-light-streams-2936.jpg');"
-  >
-    <!-- Hero content: will be in the middle -->
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title has-text-white content2h1">
-          😇
-        </h1>
-        <h2 class="subtitle has-text-white content2h2">
-          特に何もない
-        </h2>
-      </div>
-    </div>
-  </section>
-
-
+  <!-- title -->
+  <a>
+    <h1 class="logo has-text-white">Getoubashi</h1>
+  </a>
+  <!-- header -->
+  <script src="js/parts/navbar.js"></script>
+  <!-- discography -->
+  <script src="js/parts/discography/discographySection.js"></script>
+  <!-- biography -->
+  <script src="js/parts/biography/biographySection.js"></script>
 </body>
+<script src="js/script.js"></script>
 </html>

@@ -1,15 +1,17 @@
 const widgetIframe = document.getElementById('sound');
 const widget = SC.Widget(widgetIframe);
 
-const volumeBar = document.getElementById('volume');
-volumeBar.addEventListener('input', () => {
-  widget.setVolume(volumeBar.value);
+const volume = document.getElementById('volume');
+volume.addEventListener('input', () => {
+  widget.setVolume(volume.value);
 });
 
-// プレイヤーを読み込むまで2秒待つ
 const init = () => {
+  // プレイヤーの読み込みまで2秒待つ
   window.setTimeout(() => {
     widget.setVolume(25);
+    const volumebar = document.getElementById('volumebar');
+    volumebar.style.display = 'block';
   }, 2000);
 }
 
