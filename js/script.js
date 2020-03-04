@@ -27,8 +27,18 @@ for (const burder of document.getElementsByClassName('navbar-burger')) {
   });
 }
 
+let flug = true;
 window.addEventListener('scroll', () => {
-  const disco = document.getElementById('discography');
-  const rect = disco.getClientRects()[0];
-  disco.style.opacity = (rect.bottom / rect.height).toString();
+  if(flug){
+    flug = false;
+
+    window.setTimeout(function(){
+      const disco = document.getElementById('discography');
+      const rect = disco.getClientRects()[0];
+      disco.style.opacity = (rect.bottom / rect.height).toString();
+      flug = true;
+
+      return flug;
+    }, 200);
+  }
 });
