@@ -26,3 +26,9 @@ for (const burder of document.getElementsByClassName('navbar-burger')) {
     menu.classList.toggle('is-active');
   });
 }
+
+window.addEventListener('scroll', () => {
+  const disco = document.getElementById('discography');
+  const rect = disco.getClientRects()[0];
+  disco.style.opacity = (rect.bottom / rect.height).toString();
+});
