@@ -1,4 +1,4 @@
-document.write(`
+const loading = `
   <div class="loading1" id="loading">
     <div class="rect1"></div>
     <div class="rect2"></div>
@@ -6,4 +6,4 @@ document.write(`
     <div class="rect4"></div>
     <div class="rect5"></div>
   </div>
-`);
+`;

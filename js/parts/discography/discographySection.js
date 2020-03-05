@@ -1,13 +1,17 @@
-const soundcloudTrackURL = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/971590474';
-const soundcloudWidgetOption = '&color=%23bcb890&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true';
+(() => {
+  const soundcloudTrackURL = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/971590474';
+  const soundcloudWidgetOption = '&color=%23bcb890&auto_play=false&hide_related=false&download=true&show_user=true&show_reposts=false&show_teaser=false';
+  const soundcloudIframe = `
+  <iframe id="sc-widget" width="100%" height="500" allow="autoplay" scrolling="no" frameborder="no"
+    src="${soundcloudTrackURL + soundcloudWidgetOption}">
+  </iframe>
+  `;
 
-document.write(`
-  <section class="hero is-fullheight" id="discography">
+  const discography = document.getElementById('discography');
+  discography.insertAdjacentHTML('afterbegin', `
     <div class="hero-body">
       <div class="container has-text-centered">
-        <iframe id="sound" width="100%" height="450" allow="autoplay" scrolling="no" frameborder="no"
-          src="${soundcloudTrackURL + soundcloudWidgetOption}">
-        </iframe>
+        ${soundcloudIframe}
         <div class="volumebar" id="volumebar" style="display: none">
           <div>Volume</div>
           <div>
@@ -18,5 +22,5 @@ document.write(`
         </div>
       </div>
     </div>
-  </section>
-`);
+  `);
+})();

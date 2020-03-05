@@ -6,19 +6,32 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <script src="./js/soundcloudAPI.js"></script>
+  <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 </head>
 <body>
   <!-- title -->
-  <a>
+  <a href="index.html">
     <h1 class="logo has-text-white">Getoubashi</h1>
   </a>
   <!-- header -->
-  <script src="js/parts/navbar.js"></script>
+  <nav class="navbar" id="header"></nav>
   <!-- discography -->
-  <script src="js/parts/discography/discographySection.js"></script>
+  <section class="hero is-fullheight" id="discography">
+    <div class="container">
+      <div class="card-2 test">
+        <div class="content-img">
+          <img src="https://i1.sndcdn.com/artworks-7aIYLNyre70VdWP9-ljbfnA-t200x200.jpg">
+        </div>
+        <p class="content-1">攻撃力が特大上昇</p>
+      </div>
+    </div>
+  </section>
   <!-- biography -->
-  <script src="js/parts/biography/biographySection.js"></script>
+  <section class="hero is-fullheight" id="biography"></section>
 </body>
-<script src="js/script.js"></script>
+<script src="js/parts/navbar.js"></script>
+<script src="js/parts/discography/discographySection.js"></script>
+<script src="js/parts/biography/biographySection.js"></script>
+<script src="js/soundcloudScript.js"></script>
+<script src="js/event.js"></script>
 </html>

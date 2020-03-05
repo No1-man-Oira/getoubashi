@@ -1,11 +1,12 @@
-const menu1 = 'Discography';
-const menu2 = 'Biography';
+(() => {
+  const menu1 = 'Discography';
+  const menu2 = 'Biography';
 
-const discography = '#discography';
-const biography = '#biography';
+  const menuLink1 = '#discography';
+  const menuLink2 = '#biography';
 
-document.write(`
-  <nav class="navbar">
+  const header = document.getElementById('header');
+  header.insertAdjacentHTML('afterbegin', `
     <div class="container">
       <div class="navbar-brand">
         <span class="navbar-burger burger has-text-white" data-target="navbarMenuHeroA">
@@ -16,14 +17,14 @@ document.write(`
       </div>
       <div id="navbarMenuHeroA" class="navbar-menu">
         <div class="navbar-end">
-          <a href="${discography}" class="navbar-item has-text-white">
+          <a href="${menuLink1}" class="navbar-item has-text-white">
             ${menu1}
           </a>
-          <a href="${biography}" class="navbar-item has-text-white">
+          <a href="${menuLink2}" class="navbar-item has-text-white">
             ${menu2}
           </a>
         </div>
       </div>
     </div>
-  </nav>
-`);
+  `);
+})();

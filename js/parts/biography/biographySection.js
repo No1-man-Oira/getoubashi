@@ -1,17 +1,18 @@
-const biographyH1ContentText = 'なんか';
-const biographyH2ContentText = '😇';
+export default (() => {
+  const text1 = 'なんか';
+  const text2 = '😇';
 
-document.write(`
-  <section class="hero is-fullheight" id="biography">
+  const biography = document.getElementById('biography');
+  biography.insertAdjacentHTML('afterbegin', `
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title has-text-white content2h1">
-          ${biographyH1ContentText}
+          ${text1}
         </h1>
         <h2 class="subtitle has-text-white content2h2">
-          ${biographyH2ContentText}
+          ${text2}
         </h2>
       </div>
     </div>
-  </section>
-`);
+  `);
+})();
