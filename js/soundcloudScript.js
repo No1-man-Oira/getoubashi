@@ -24,7 +24,20 @@ const selectPlay = (widget, id) => {
   console.log('セレクト');
   const newSoundUrl = `https://api.soundcloud.com/tracks/${!id ? '257744888' : id}`;
   widget.load(newSoundUrl, {
-    show_teaser: false
+    color: '%23bcb890',
+    auto_play: false,
+    buying: false,
+    liking: false,
+    download: false,
+    sharing: false,
+    show_artwork: false,
+    show_comments: false,
+    show_playcount: false,
+    show_user: false,
+    show_reposts: false,
+    hide_related: false,
+    show_teaser: false,
+    visual: true
   });
 };
 
@@ -43,8 +56,8 @@ const selectPlay = (widget, id) => {
     });
   });
 
-  document.getElementsByClassName('test')[0].addEventListener('click', () => {
-    selectPlay(widget, '257745112');
-  });
+  // document.getElementsByClassName('test')[0].addEventListener('click', () => {
+  //   selectPlay(widget, '257745112');
+  // });
 
 })();

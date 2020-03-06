@@ -23,8 +23,9 @@ const onScrollChangeBackGround = () => {
 
       window.setTimeout(function () {
         const discography = document.getElementById('discography');
-        const rect = discography.getClientRects()[0];
-        discography.style.opacity = (rect.bottom / rect.height).toString();
+        const discoRect = discography.getClientRects()[0];
+        discography.style.opacity = (discoRect.bottom / discoRect.height).toString();
+
         scrolled = true;
       }, 200);
     }
