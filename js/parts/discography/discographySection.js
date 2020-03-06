@@ -17,18 +17,10 @@
     '&show_teaser=false' +
     '&visual=true';
   const soundcloudIframe = `
-  <iframe id="sc-widget" width="100%" height="500px" scrolling="no" frameborder="no"
+  <iframe id="sc-widget" width="100px" height="100px" scrolling="no" frameborder="no"
     src="${apiUrl + apiOption}" style="position: absolute; z-index: -1;">
   </iframe>
   `;
-
-  let trackPanel = '';
-  trackList.forEach((track) => {
-    trackPanel += `
-    <a class="panel-block">
-      ${track.name}
-    </a>`
-  });
 
   const musicplayer = document.getElementById('musicplayer');
   musicplayer.insertAdjacentHTML('afterbegin', `
