@@ -37,6 +37,11 @@ a.navbar-item:hover {
     url('../images/02.jpg');
 }
 
+.music {
+  padding: 0 10vw;
+  width: 100%;
+}
+
 .logo {
   position: fixed;
   top: -20px;
@@ -71,11 +76,17 @@ a.navbar-item:hover {
   background: none;
   width: 100%;
   height: 70px;
-  position: fixed;
   z-index: 3;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.navbar-menu {
+  display: block;
+  top: 20px;
+  right: 400px;
+  position: fixed;
 }
 
 @media screen and (max-width: 1023px) {
@@ -93,7 +104,12 @@ a.navbar-item:hover {
   }
 
   .navbar-menu {
+    transition: all 1s;
+    opacity: 0;
     height: 100%;
+    width: 100%;
+    left: 200px;
+    top: 200px;
     background-color: rgb(105, 200, 205, 0.5);
     box-shadow: 0 8px 16px rgba(10, 10, 10,.1);
     padding:.5rem 0;
@@ -101,6 +117,7 @@ a.navbar-item:hover {
 
   .navbar-menu.is-active {
     position: fixed;
+    opacity: 1;
     width: 100%;
     left: 200px;
     top: 200px;
