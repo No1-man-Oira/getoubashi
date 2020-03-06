@@ -1,4 +1,4 @@
-export default (() => {
+(() => {
   const text1 = 'なんか';
   const text2 = '😇';
 

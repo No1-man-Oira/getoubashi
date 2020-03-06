@@ -1,5 +1,3 @@
-import defaultExport from './parts/discography/discographySection';
-
 /**
  * クリックでナビバーを開閉
  */
@@ -35,4 +33,3 @@ const onScrollChangeBackGround = () => {
 
 onScrollChangeBackGround();
 onClickSwitchNavbar();
-defaultExport();

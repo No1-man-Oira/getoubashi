@@ -1,7 +1,7 @@
 /**
 * トラックリスト
 */
-export const trackList = [
+const trackList = [
   {
     name: '幻想大陸',
     id: '257744888',
