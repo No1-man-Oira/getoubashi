@@ -37,7 +37,7 @@ const selectPlay = (widget, id) => {
     show_reposts: false,
     hide_related: false,
     show_teaser: false,
-    visual: true
+    visual: false
   });
 };
 

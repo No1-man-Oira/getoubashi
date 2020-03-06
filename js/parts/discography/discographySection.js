@@ -15,10 +15,10 @@
     '&show_reposts=false' +
     '&hide_related=false' +
     '&show_teaser=false' +
-    '&visual=true';
+    '&visual=false';
   const soundcloudIframe = `
   <iframe id="sc-widget" width="100px" height="100px" scrolling="no" frameborder="no"
-    src="${apiUrl + apiOption}" style="position: absolute; z-index: -1;">
+    src="${apiUrl + apiOption}" style="display: none; z-index: -1;">
   </iframe>
   `;
 
