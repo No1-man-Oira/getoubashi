@@ -96,12 +96,21 @@ a.navbar-item:hover {
   top: calc(50% - 0px);
 }
 
+.navbar-burger.is-active span:nth-child(1) {
+  transform: translateY(55px) rotate(45deg);
+  top: calc(50% - 20px);
+}
+
 .navbar-burger span:nth-child(2) {
   top: calc(50% - -30px);
 }
 
 .navbar-burger span:nth-child(3) {
   top: calc(50% + 60px);
+}
+
+.navbar-burger.is-active span:nth-child(3) {
+  top: calc(50% + 40px);
 }
 
 .navbar-item {
@@ -209,6 +218,8 @@ a.navbar-item:hover {
     width: 100%;
     left: 0px;
     z-index: 200;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .navbar-burger {
