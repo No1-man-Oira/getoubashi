@@ -1,12 +1,12 @@
-/**
- * スライドで音量を設定する
- */
-const onInputSetVolume = (widget) => {
-  const volume = document.getElementById('volume');
-  volume.addEventListener('input', () => {
-    widget.setVolume(volume.value);
-  });
-}
+// /**
+//  * スライドで音量を設定する
+//  */
+// const onInputSetVolume = (widget) => {
+//   const volume = document.getElementById('volume');
+//   volume.addEventListener('input', () => {
+//     widget.setVolume(volume.value);
+//   });
+// }
 
 /**
  * 初期音量を設定する
@@ -16,7 +16,7 @@ const setInitialVolume = (widget) => {
   widget.getCurrentSound((callback) => {
     console.log(callback);
   });
-  document.getElementById('volumebar').style.display = 'block';
+  // document.getElementById('volumebar').style.display = 'block';
 }
 
 
@@ -41,6 +41,26 @@ const selectPlay = (widget, id) => {
   });
 };
 
+const onClickPlaySound = (widget) => {
+  const playBtn = document.getElementById('playBtn');
+  playBtn.addEventListener('click', () => {
+    widget.play();
+    console.log('再生🙆‍♂️');
+    const playscreen = document.getElementById('playscreen');
+    playscreen.style.display = 'none';
+  });
+}
+
+/**
+ * クリックでボリュームバーを開閉
+ */
+const onClickSwitchVolumebar = () => {
+  const dropdownVolumebar = document.getElementById('dropdown-volumebar');
+  dropdownVolumebar.addEventListener('click', e => {
+    dropdownVolumebar.classList.toggle('is-active');
+  });
+}
+
 (() => {
   const widgetIframe = document.getElementById('sc-widget');
   const widget = SC.Widget(widgetIframe);
@@ -50,14 +70,18 @@ const selectPlay = (widget, id) => {
     // load new widget
     console.log('ロード完了🙆‍♂️');
     setInitialVolume(widget);
-    onInputSetVolume(widget);
+    // onInputSetVolume(widget);
+
+    const trackImg = document.getElementById('trackImg');
+    const imgUrl = `https://i1.sndcdn.com/artworks-yNDBcx5xzzt1bpSd-5HawgQ-t500x500.jpg`;
+    trackImg.setAttribute('src', imgUrl);
+
+    onClickPlaySound(widget);
+
+    onClickSwitchVolumebar();
+
     widget.bind(SC.Widget.Events.FINISH, () => {
       console.log('終了🙇');
     });
   });
-
-  // document.getElementsByClassName('test')[0].addEventListener('click', () => {
-  //   selectPlay(widget, '257745112');
-  // });
-
 })();

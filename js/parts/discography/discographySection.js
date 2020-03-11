@@ -1,5 +1,5 @@
 (() => {
-  const trackId = 'tracks/257744888';
+  const trackId = 'playlists/971590474';
   const apiUrl = `https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/${trackId}`;
   const apiOption =
     `&color=%23bcb890` +
@@ -17,10 +17,36 @@
     '&show_teaser=false' +
     '&visual=false';
   const soundcloudIframe = `
-  <iframe id="sc-widget" width="100px" height="100px" scrolling="no" frameborder="no"
-    src="${apiUrl + apiOption}" style="display: none; z-index: -1;">
+  <iframe id="sc-widget" width="100%" height="300px" scrolling="no" frameborder="no" allow="autoplay"
+    src="${apiUrl + apiOption}">
   </iframe>
   `;
+
+  const volumeIcon = `
+    <div class="dropdown is-up is-right" id="dropdown-volumebar">
+      <div class="dropdown-trigger">
+          <span class="icon is-small">
+            <i class="material-icons">volume_up</i>
+          </span>
+      </div>
+      <div class="dropdown-menu" id="dropdown-volume">
+        <div class="dropdown-content">
+          <div class="dropdown-item">
+            100%
+          </div>
+          <div class="dropdown-item">
+            50%
+          </div>
+          <div class="dropdown-item">
+            25%
+          </div>
+          <div class="dropdown-item">
+            0%
+          </div>
+        </div>
+      </div>
+    </div>
+  `
 
   const musicplayer = document.getElementById('musicplayer');
   musicplayer.insertAdjacentHTML('afterbegin', `
@@ -29,14 +55,7 @@
     </h1>
     ${soundcloudIframe}
     <span class="player">
-      <div class="volumebar" id="volumebar" style="display: none">
-        <div>Volume</div>
-        <div>
-          <label>0 </label>
-          <input id="volume" class="input-range" type="range" name="range" value="25" data-unit="%">
-          <label> 100</label>
-        </div>
-      </div>
+      ${volumeIcon}
     </span>
 
   `);
