@@ -86,6 +86,7 @@ a.navbar-item:hover {
   z-index: 1;
   bottom: -140px;
   position: absolute;
+  left: 0;
 }
 
 #playButton {
