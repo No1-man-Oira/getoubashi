@@ -44,7 +44,7 @@ const selectPlay = (widget, id) => {
 const onClickPlaySound = (widget) => {
   const playBtn = document.getElementById('playBtn');
   playBtn.addEventListener('click', () => {
-    widget.play();
+    // widget.play();
     console.log('再生🙆‍♂️');
     const playscreen = document.getElementById('playscreen');
     // playscreen.style.display = 'none';

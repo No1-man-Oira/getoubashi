@@ -1,7 +1,12 @@
 body {
   /* font-family: -webkit-pictograph; */
   font-family: 'Libre Baskerville', serif;
+  /* position: inherit; */
 }
+
+/* body.modal-open {
+  position: fixed;
+} */
 
 a.navbar-item.is-active {
   background-color: darkcyan;
@@ -175,7 +180,26 @@ a.navbar-item:hover {
 }
 
 #track-image {
-  max-height: 350px;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:100%;
+}
+
+.modal-background {
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url('../images/01.jpg');
+}
+
+.modal-card-body {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+}
+
+.modal-card {
+  text-align: center;
 }
 
 .track-content {
@@ -184,10 +208,6 @@ a.navbar-item:hover {
 
 .track-title {
   padding-top: 0.5rem;
-}
-
-.modal-card-body {
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .material-icons {
@@ -305,10 +325,6 @@ a.navbar-item:hover {
     bottom: 0;
     width: 100%;
     left: 0;
-  }
-
-  #track-image {
-    max-height: auto;
   }
 
   .logo {

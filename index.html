@@ -11,35 +11,40 @@
   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 </head>
 <body>
-  <!-- header -->
-  <nav class="navbar" id="header"></nav>
-  <!-- top -->
-  <section class="hero is-fullheight" id="top">
-    <div class="hero-body">
-      <a href="#discography">
-        <h1 class="logo title has-text-white">Ge<br>tou<br>bashi</h1>
-      </a>
-    </div>
-  </section>
-  <!-- discography -->
-  <section class="hero is-fullheight" id="discography">
-    <div class="hero-body">
-      <div id="musicplayer" class="container has-text-centered music">
-        <div class="play-btn" id="playscreen">
-          <a class="mybtn" id="playBtn"></a>
-        </div>
-        <img class="trackImg" id="trackImg">
+  <!-- wrapper -->
+  <div id="wrapper">
+    <!-- header -->
+    <nav class="navbar" id="header"></nav>
+    <!-- top -->
+    <section class="hero is-fullheight" id="top">
+      <div class="hero-body">
+        <a href="#discography">
+          <h1 class="logo title has-text-white">Ge<br>tou<br>bashi</h1>
+        </a>
       </div>
-    </div>
-  </section>
-  <!-- biography -->
-  <section class="hero is-fullheight" id="biography">
-  </section>
+    </section>
+    <!-- discography -->
+    <section class="hero is-fullheight" id="discography">
+      <div class="hero-body">
+        <div id="musicplayer" class="container has-text-centered music">
+          <div class="play-btn" id="playscreen">
+            <a class="mybtn" id="playBtn"></a>
+          </div>
+          <img class="trackImg" id="trackImg">
+        </div>
+      </div>
+    </section>
+    <!-- biography -->
+    <section class="hero is-fullheight" id="biography">
+    </section>
+  </div>
+  <div id="modal-div"></div>
 </body>
 <script src="js/trackList.js"></script>
 <script src="js/parts/navbar.js"></script>
 <script src="js/parts/discography/discographySection.js"></script>
 <script src="js/parts/biography/biographySection.js"></script>
+<script src="js/parts/musicPlayer/musicPlayerSection.js"></script>
 <script src="js/soundcloudScript.js"></script>
 <script src="js/event.js"></script>
 </html>

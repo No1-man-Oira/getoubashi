@@ -38,6 +38,10 @@ const onScrollChangeBackGround = () => {
     console.log('ん？😇');
     const modal = document.getElementById('sound-modal');
     modal.classList.toggle('is-active');
+    // document.body.classList.toggle('modal-open');
+    const wrapper = document.getElementById('wrapper');
+    wrapper.style.visibility = 'hidden';
+
   })
 })();
 
@@ -47,6 +51,10 @@ const onScrollChangeBackGround = () => {
     modalCloseElement[i].addEventListener('click', () => {
       const modal = document.getElementById('sound-modal');
       modal.classList.toggle('is-active');
+      // document.body.classList.toggle('modal-open');
+      // window.location.hash = '#biography';
+      // window.location.hash = '#discography';
+      wrapper.style.visibility = 'visible';
     });
   }
 })();
