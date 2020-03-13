@@ -18,7 +18,7 @@
     '&visual=false';
   const soundcloudIframe = `
   <iframe id="sc-widget" width="100%" height="300px" scrolling="no" frameborder="no" allow="autoplay"
-    src="${apiUrl + apiOption}">
+    src="${apiUrl + apiOption}" style="display: none;">
   </iframe>
   `;
 
@@ -54,7 +54,7 @@
       MUSIC
     </h1>
     ${soundcloudIframe}
-    <span class="player">
+    <span class="player" style="display: none;>
       ${volumeIcon}
     </span>
 

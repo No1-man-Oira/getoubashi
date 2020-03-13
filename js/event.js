@@ -33,7 +33,7 @@ const onScrollChangeBackGround = () => {
 }
 
 (() => {
-  const btn = document.getElementById('test');
+  const btn = document.getElementById('playBtn');
   btn.addEventListener('click', () => {
     console.log('ん？😇');
     const modal = document.getElementById('sound-modal');

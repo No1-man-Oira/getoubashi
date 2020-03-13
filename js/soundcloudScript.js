@@ -47,7 +47,7 @@ const onClickPlaySound = (widget) => {
     widget.play();
     console.log('再生🙆‍♂️');
     const playscreen = document.getElementById('playscreen');
-    playscreen.style.display = 'none';
+    // playscreen.style.display = 'none';
   });
 }
 
@@ -73,7 +73,7 @@ const onClickSwitchVolumebar = () => {
     // onInputSetVolume(widget);
 
     const trackImg = document.getElementById('trackImg');
-    const imgUrl = `https://i1.sndcdn.com/artworks-yNDBcx5xzzt1bpSd-5HawgQ-t500x500.jpg`;
+    const imgUrl = `https://i1.sndcdn.com/artworks-yHdscZQmT8gOiBwz-ehZRvQ-t500x500.jpg`;
     trackImg.setAttribute('src', imgUrl);
 
     onClickPlaySound(widget);

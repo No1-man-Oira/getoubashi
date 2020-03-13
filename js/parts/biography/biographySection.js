@@ -12,9 +12,9 @@
   const seekController = `
     <section id="seek-controller">
       <div>
-        <input type="range" id="time" name="time" min="0" max="11" style="width: 100%;">
+        <input class="slidebar seek" id="seekbar" type="range" id="time" name="time" min="0" max="11" style="width: 100%;">
       </div>
-      <div>
+      <div style="padding-top: 25px;">
         <label class="is-pulled-left" for="">--:--</label>
         <label class="is-pulled-right" for="">--:--</label>
       </div>
@@ -32,7 +32,7 @@
   const volumeController = `
     <section class="section" id="volume-controller">
       <i class="material-icons is-pulled-left">volume_mute</i>
-      <input type="range" id="" name="" min="0" max="100" value="90" step="10" style="width: 60%;">
+      <input class="slidebar" type="range" id="" name="" min="0" max="100" value="90" step="10" style="width: 60%;">
       <i class="material-icons is-pulled-right">volume_up</i>
     </section>
   `;
@@ -42,7 +42,7 @@
       <div class="modal-background close-modale"></div>
       <div class="modal-card">
         <section class="modal-card-body track-content">
-          <img src="https://i1.sndcdn.com/artworks-yNDBcx5xzzt1bpSd-5HawgQ-t500x500.jpg">
+          <img id="track-image" src="https://i1.sndcdn.com/artworks-yNDBcx5xzzt1bpSd-5HawgQ-t500x500.jpg">
         </section>
         <footer id="player-foot" class="modal-card-foot">
           ${trackTitle}
