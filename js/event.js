@@ -32,5 +32,24 @@ const onScrollChangeBackGround = () => {
   });
 }
 
+(() => {
+  const btn = document.getElementById('test');
+  btn.addEventListener('click', () => {
+    console.log('ん？😇');
+    const modal = document.getElementById('sound-modal');
+    modal.classList.toggle('is-active');
+  })
+})();
+
+(() => {
+  const modalCloseElement = document.getElementsByClassName('close-modale');
+  for (let i = 0; i < modalCloseElement.length; i++) {
+    modalCloseElement[i].addEventListener('click', () => {
+      const modal = document.getElementById('sound-modal');
+      modal.classList.toggle('is-active');
+    });
+  }
+})();
+
 onScrollChangeBackGround();
 onClickSwitchNavbar();

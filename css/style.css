@@ -214,6 +214,15 @@ a.navbar-item:hover {
   /* z-index: 3; */
 }
 
+.is-large.delete, .is-large.modal-close {
+  height: 128px;
+  max-height: 128px;
+  max-width: 128px;
+  min-height: 128px;
+  min-width: 128px;
+  width: 128px;
+}
+
 @media screen and (max-width: 1023px) {
   .logo {
     top: auto;
