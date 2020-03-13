@@ -112,7 +112,38 @@ a.navbar-item:hover {
 }
 
 #dropdown-volumebar {
- z-index: 10;
+  z-index: 10;
+}
+
+#player-foot {
+  display: block;
+}
+
+#play-controller {
+  width: 70%;
+  display: inline-block;
+}
+
+#volume-controller {
+  width: 100%;
+  display: inline-block;
+}
+
+#seek-controller {
+  width: 90%;
+  display: inline-block;
+}
+
+.track-content {
+  overflow: hidden;
+}
+
+.track-title {
+  padding-top: 0.5rem;
+}
+
+.modal-card-body {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .material-icons {
@@ -225,6 +256,13 @@ a.navbar-item:hover {
 }
 
 @media screen and (max-width: 1023px) {
+  #player-foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+
   .logo {
     top: auto;
     bottom: 20%;
