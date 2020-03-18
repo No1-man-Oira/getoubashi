@@ -28,9 +28,24 @@
       <div class="hero-body">
         <div id="musicplayer" class="container has-text-centered music">
           <h1 class="title has-text-white content2h1">MUSIC</h1>
+          <i class="material-icons is-pulled-left"
+            style="
+            color:white;
+            font-size: 200px;
+            position: absolute;
+            left: 0;
+            bottom: 20%;"
+          >skip_previous</i>
           <img class="trackImg" id="trackImg" src="https://i1.sndcdn.com/artworks-yHdscZQmT8gOiBwz-ehZRvQ-t500x500.jpg">
-          <section class="section" id="player">
-            <audio src="./track/sample.mp3" controls style="width: 100%;"></audio>
+          <i class="material-icons is-pulled-left"
+            style="
+            color:white;
+            font-size: 200px;
+            position: absolute;
+            right: 0;
+            bottom: 20%;">skip_next</i>
+          <section class="section" id="player" style="padding: 0;">
+            <audio src="./track/sample.mp3" controls style="width: 100%; zoom: 2;"></audio>
           </section>
         </div>
       </div>
@@ -43,6 +58,5 @@
 </body>
 <script src="js/trackList.js"></script>
 <script src="js/parts/navbar.js"></script>
-<script src="js/parts/discography/discographySection.js"></script>
 <script src="js/event.js"></script>
 </html>
