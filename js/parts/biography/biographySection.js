@@ -1,6 +1,4 @@
 (() => {
-  const text1 = 'なんか';
-  const text2 = '😇';
   const biography = document.getElementById('biography');
   biography.insertAdjacentHTML(
     'afterbegin',
