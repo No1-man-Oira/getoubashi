@@ -186,6 +186,13 @@ a.navbar-item:hover {
   max-height:100%;
 }
 
+#player{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .modal-background {
   background-size: cover;
   background-position: center;
