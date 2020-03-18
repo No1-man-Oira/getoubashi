@@ -327,8 +327,66 @@ a.navbar-item:hover {
   width: 128px;
 }
 
+#track {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+#track-name {
+
+}
+
+#track-name-area {
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  top: 32%;
+  font-size: 3vmax;
+  color: white;
+  left: 30%;
+  z-index: 1;
+}
+
 /* スマホ縦 */
 @media screen and (max-width: 1023px) {
+  #musicplayer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80%;
+  }
+
+  #discography-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10%;
+  }
+
+  #trackImg {
+    top: 30%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  #skip-previous {
+    color: white;
+    font-size: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+  }
+
+  #skip-next {
+    color: white;
+    font-size: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 40%;
+  }
+
   #player-foot {
     position: fixed;
     bottom: 0;

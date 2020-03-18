@@ -27,25 +27,15 @@
     <section class="hero is-fullheight" id="discography">
       <div class="hero-body">
         <div id="musicplayer" class="container has-text-centered music">
-          <h1 class="title has-text-white content2h1">MUSIC</h1>
-          <i class="material-icons is-pulled-left"
-            style="
-            color:white;
-            font-size: 200px;
-            position: absolute;
-            left: 0;
-            bottom: 20%;"
-          >skip_previous</i>
+          <h1 class="title has-text-white content2h1" id="discography-title">MUSIC</h1>
+          <div id="track-name-area">
+            <label id="track-name">幻想大陸</label>
+          </div>
           <img class="trackImg" id="trackImg" src="https://i1.sndcdn.com/artworks-yHdscZQmT8gOiBwz-ehZRvQ-t500x500.jpg">
-          <i class="material-icons is-pulled-left"
-            style="
-            color:white;
-            font-size: 200px;
-            position: absolute;
-            right: 0;
-            bottom: 20%;">skip_next</i>
+          <i class="material-icons is-pulled-left" id="skip-previous">skip_previous</i>
+          <i class="material-icons is-pulled-left" id="skip-next">skip_next</i>
           <section class="section" id="player">
-            <audio src="./track/sample.mp3" controls style="width: 100%; height: 100px; margin-bottom: 15px;"></audio>
+            <audio id="track" src="./track/01_幻想大陸.mp3" controls></audio>
           </section>
         </div>
       </div>
