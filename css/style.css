@@ -190,7 +190,7 @@ a.navbar-item:hover {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 10px;
 }
 
 .modal-background {
@@ -263,7 +263,8 @@ a.navbar-item:hover {
 
 .trackImg {
   width: 100%;
-  max-height: 600px;
+  max-width: 500px;
+  max-height: 500px;
 }
 
 .navbar {
@@ -326,6 +327,7 @@ a.navbar-item:hover {
   width: 128px;
 }
 
+/* スマホ縦 */
 @media screen and (max-width: 1023px) {
   #player-foot {
     position: fixed;
@@ -349,6 +351,20 @@ a.navbar-item:hover {
 
   .navbar-item {
     font-size: 8rem;
+  }
+
+  /* スマホ横 */
+  @media screen and (max-height: 500px) {
+    .navbar-item {
+        font-size: 4rem;
+    }
+    .logo {
+      bottom: 0;
+    }
+    .trackImg {
+      max-width: 300px;
+      max-height: 300px;
+    }
   }
 
   .navbar-menu {
