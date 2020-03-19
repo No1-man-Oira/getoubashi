@@ -3,6 +3,10 @@
   bottom: 20px;
   left: 20px;
   opacity: 0.7;
+  width: 1500px;
+  text-align: initial;
+  color: white;
+  font-size: 100px;
 }
 
 .section {
