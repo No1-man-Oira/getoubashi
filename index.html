@@ -4,49 +4,77 @@
   <meta http-equiv="content-type" charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" rel="stylesheet" >
-  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+  <link type="text/css" href="./css/style.css" rel="stylesheet">
+  <link type="text/css" href="./css/menu_style.css" rel="stylesheet">
+  <link type="text/css" href="./css/music_section_style.css" rel="stylesheet">
 </head>
 <body>
   <!-- wrapper -->
   <div id="wrapper">
+
+    <!-- back ground -->
+    <div class="bg"></div>
+
     <!-- header -->
-    <nav class="navbar" id="header"></nav>
-    <!-- top -->
-    <section class="hero is-fullheight" id="top">
-      <div class="hero-body">
-        <a href="#discography">
-          <h1 class="logo title has-text-white">Ge<br>tou<br>bashi</h1>
-        </a>
-      </div>
-    </section>
-    <!-- discography -->
-    <section class="hero is-fullheight" id="discography">
-      <div class="hero-body">
-        <div id="musicplayer" class="container has-text-centered music">
-          <h1 class="title has-text-white content2h1" id="discography-title">MUSIC</h1>
-          <div id="track-name-area">
-            <label id="track-name">幻想大陸</label>
+    <header id="header">
+      <nav id="menu_content">
+        <div class="menu_bg"></div>
+        <div class="menu_wrapper">
+          <div class="inner">
+            <ul id="menu">
+              <li>
+                <a class="menu-item" href="#home-section">
+                  <span>HOME</span>
+                </a>
+              </li>
+              <li>
+                <a class="menu-item" href="#music-section">
+                  <span>MUSIC</span>
+                </a>
+              </li>
+              <li>
+                <a class="menu-item" href="">
+                  <span>ABOUT</span>
+                </a>
+              </li>
+              <li>
+                <a class="menu-item" href="">
+                  <span>LIVE</span>
+                </a>
+              </li>
+            </ul>
           </div>
-          <img class="trackImg" id="trackImg" src="https://i1.sndcdn.com/artworks-yHdscZQmT8gOiBwz-ehZRvQ-t500x500.jpg">
-          <i class="material-icons is-pulled-left" id="skip-previous">skip_previous</i>
-          <i class="material-icons is-pulled-left" id="skip-next">skip_next</i>
-          <section class="section" id="player">
-            <audio id="track" src="./track/01_幻想大陸.mp3" controls></audio>
-          </section>
+        </div>
+      </nav>
+      <div id="menu_btn">
+        <div class="wrap">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-    </section>
-    <!-- biography -->
-    <section class="hero is-fullheight" id="biography">
-    </section>
+    </header>
+
+    <!-- contents section -->
+    <div id="contents">
+
+      <div id="home-section" class="section section-top">
+        <a href="" class="logo">
+          <img src="images/logo.png">
+        </a>
+      </div>
+
+      <div id="music-section" class="section section-music">
+        <div class="section-inner">
+          <div class="section-wrap">
+            <h2 class="cection-title">MUSIC</h2>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-  <div id="modal-div"></div>
 </body>
-<script src="js/trackList.js"></script>
-<script src="js/parts/navbar.js"></script>
 <script src="js/event.js"></script>
 </html>

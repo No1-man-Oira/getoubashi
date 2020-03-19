@@ -1,101 +1,73 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  color: #000;
+  overflow-x: hidden;
+  font-size: 10px;
+  background: #FFF;
+}
+
 body {
-  /* font-family: -webkit-pictograph; */
-  font-family: 'Libre Baskerville', serif;
-  /* position: inherit; */
-}
-
-/* body.modal-open {
-  position: fixed;
-} */
-
-a.navbar-item.is-active {
-  background-color: darkcyan;
-}
-
-a.navbar-item:hover {
-  background-color: darkcyan;
-}
-
-.slidebar {
-  -webkit-appearance: none;
-  margin: 0;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "MS Pゴシック", "MS P Gothic", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
   width: 100%;
-  height: 5px;
-  background-color: lightgrey;
+  min-width: 1200px;
+  position: relative;
+  background-color: #000;
 }
 
-.slidebar.seek {
-  -webkit-appearance: none;
-  margin: 0;
-  width: 100%;
-  height: 15px;
-  background-color: lightgrey;
-}
-
-.slidebar:focus {
-  outline: none;
-}
-
-.slidebar::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  height: 36px;
-  width: 36px;
-  border-radius: 50%;
-  background: #ffffff;
+a, .btn {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: #000;
+  opacity: 1;
   cursor: pointer;
-  -webkit-appearance: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.seek.slidebar::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-  -webkit-appearance: none;
+body,
+div,
+dl, dt, dd,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, code,
+form, fieldset,
+legend, input, textarea,
+p, blockquote,
+th, td {
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
 }
 
-.play-btn {
-  position: absolute;
-  text-align: center;
-  background-color: black;
-  height: 78%;
-  width: 100%;
-  opacity: 0.5;
+ul {
+  list-style: none;
 }
 
-.play-btn a:after {
-  display: block;
-  content: "";
-  position: absolute;
-  border: 60px solid transparent;
-  border-left: 100px solid white;
-  margin-left: -5px;
+img {
+  vertical-align: bottom;
+  height: auto;
 }
 
-.mybtn {
-  top: 40%;
-  position: absolute;
-  display: inline-block;
-  color: #fff;
-  border-radius: 16px;
-  font-size: 18px;
-  height:70px;
+fieldset, img {
+    border: 0;
 }
 
-#discography .hero-body {
-  padding: 100px;
-  background-color: rgba(0,0,0,0.2);
-}
-
-#discography:before {
+.bg {
   content: '';
   display: block;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
   width: 100%;
   height: 100vh;
   opacity: 1;
@@ -106,373 +78,8 @@ a.navbar-item:hover {
     url('../images/01.jpg');
 }
 
-#biography:before {
-  content: '';
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-    url('../images/02.jpg');
-}
-
-#musicplayer {
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
-#sc-widget {
-  z-index: 1;
-  bottom: -140px;
-  position: absolute;
-  left: 0;
-}
-
-#playButton {
-  position: relative;
-}
-
-#playButton:before{
-  content: '';
-  width: 12px;
-  height: 12px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background: #7a0;
-}
-
-#playButton:after{
-  content: '';
-  left: 5px;
-  box-sizing: border-box;
-  width: 3px;
-  height: 3px;
-  border: 3px solid transparent;
-  border-left: 3px solid #fff;
-}
-
-#dropdown-volumebar {
-  z-index: 10;
-}
-
-#player-foot {
-  display: block;
-}
-
-#play-controller {
-  width: 70%;
-  display: inline-block;
-}
-
-#volume-controller {
-  width: 100%;
-  display: inline-block;
-}
-
-#seek-controller {
-  width: 90%;
-  display: inline-block;
-}
-
-#track-image {
-  width:auto;
-  height:auto;
-  max-width:100%;
-  max-height:100%;
-}
-
-#player{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 10px;
-}
-
-.modal-background {
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-    url('../images/01.jpg');
-}
-
-.modal-card-body {
-  background-color: rgba(255, 255, 255, 0);
-  padding: 0;
-}
-
-.modal-card {
-  text-align: center;
-}
-
-.track-content {
-  overflow: hidden;
-}
-
-.track-title {
-  padding-top: 0.5rem;
-}
-
-.material-icons {
-  font-size:  50px;
-}
-
-.logo {
-  top: auto;
-  bottom: 10%;
-  left: 6%;
-  font-size: 10rem;
-  position: absolute;
-}
-
-.navbar-burger span {
-  height: 12px;
-  left: calc(50% - 120px);
-  width: 120px;
-  z-index: 500;
-}
-
-.navbar-burger span:nth-child(1) {
-  top: calc(50% - 0px);
-}
-
-.navbar-burger.is-active span:nth-child(1) {
-  transform: translateY(55px) rotate(45deg);
-  top: calc(50% - 20px);
-}
-
-.navbar-burger span:nth-child(2) {
-  top: calc(50% - -30px);
-}
-
-.navbar-burger span:nth-child(3) {
-  top: calc(50% + 60px);
-}
-
-.navbar-burger.is-active span:nth-child(3) {
-  top: calc(50% + 40px);
-}
-
-.navbar-item {
-  font-size: 2.5rem;
-}
-
-.trackImg {
-  width: 100%;
-  max-width: 500px;
-  max-height: 500px;
-}
-
-.navbar {
-  background: none;
-  width: 100%;
-  height: 200px;
-  z-index: 3;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.navbar-menu {
-  display: block;
-  top: 0;
-  right: 10%;
-  position: fixed;
-}
-
-.dropdown {
-  width: 100%;
-  height: 100%;
-}
-
-.dropdown-trigger {
-  width: 100%;
-  top: 50%;
-  position: absolute;
-}
-
-.dropdown-item {
-  font-size: 1.875rem;
-}
-
-.player {
-  bottom: 20%;
-  position: absolute;
-  width: calc(20% + 1px);
-  height: 100px;
-  right: 0;
-  background-color: white;
-  z-index: 2;
-}
-
-.volumebar {
-  color: white;
-  margin-bottom: 10px;
-  position: absolute;
-  top: 0;
-  right: 24px;
-  /* z-index: 3; */
-}
-
-.is-large.delete, .is-large.modal-close {
-  height: 128px;
-  max-height: 128px;
-  max-width: 128px;
-  min-height: 128px;
-  min-width: 128px;
-  width: 128px;
-}
-
-#track {
-  width: 100%;
-  height: 100px;
-  margin-bottom: 15px;
-}
-
-#track-name {
-
-}
-
-#track-name-area {
-  background-color: rgba(0,0,0,0.3);
-  position: absolute;
-  top: 32%;
-  font-size: 3vmax;
-  color: white;
-  left: 30%;
-  z-index: 1;
-}
-
-/* スマホ縦 */
-@media screen and (max-width: 1023px) {
-  #musicplayer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 80%;
+@media screen and (max-width: 767px) {
+  img {
+    max-width: 100%;
   }
-
-  #discography-title {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 10%;
-  }
-
-  #trackImg {
-    top: 30%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-
-  #skip-previous {
-    color: white;
-    font-size: 200px;
-    position: absolute;
-    left: 0;
-    bottom: 40%;
-  }
-
-  #skip-next {
-    color: white;
-    font-size: 200px;
-    position: absolute;
-    right: 0;
-    bottom: 40%;
-  }
-
-  #player-foot {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-  }
-
-  .logo {
-    top: auto;
-    bottom: 20%;
-    left: 6%;
-    right: auto;
-    font-size: 24vw;
-    font-size: 12vmax;
-  }
-
-  .hrto-head {
-    height: 100px;
-  }
-
-  .navbar-item {
-    font-size: 8rem;
-  }
-
-  /* スマホ横 */
-  @media screen and (max-height: 500px) {
-    .navbar-item {
-        font-size: 4rem;
-    }
-    .logo {
-      bottom: 0;
-    }
-    .trackImg {
-      max-width: 300px;
-      max-height: 300px;
-    }
-  }
-
-  .navbar-menu {
-    transition: all 0.6s;
-    z-index: 0;
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    left: 100%;
-    top: 200px;
-    background-color: rgb(0, 0, 0, 0.5);
-    box-shadow: 0 8px 16px rgba(10, 10, 10,.1);
-    padding:.5rem 0;
-  }
-
-  .navbar-menu.is-active {
-    position: fixed;
-    opacity: 1;
-    width: 100%;
-    left: 0px;
-    z-index: 200;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-
-  .navbar-burger {
-    position: fixed;
-    top: 20;
-    right: 20;
-  }
-}
-
-.panel-block {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.content2h1, .content2h2 {
-  font-size: 8rem;
-}
-
-.input-range[type=range] {
-  -webkit-appearance: none;
-
-  appearance: none;
-  background-color: #c7c7c7;
-  height: 2px;
-}
-
-.input-range[type=range]:focus,
-.input-range[type=range]:active {
-  outline: none;
 }

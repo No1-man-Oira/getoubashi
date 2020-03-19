@@ -1,36 +1,35 @@
+
 /**
- * クリックでナビバーを開閉
+ * active クラスを切り替え
  */
-const onClickSwitchNavbar = () => {
-  for (const burder of document.getElementsByClassName('navbar-burger')) {
-    const menuId = burder.dataset.target;
-    const menu = document.getElementById(menuId);
-    burder.addEventListener('click', e => {
-      burder.classList.toggle('is-active');
-      menu.classList.toggle('is-active');
+const switchActive = (menuBtn, menuContent) => {
+  menuBtn.classList.toggle('active');
+  menuContent.classList.toggle('active');
+}
+
+/**
+ * menuItem クリック時にナビバーを消す
+ */
+const onClickCloseNavbar = (menuBtn, menuContent) => {
+  for (const menuItem of document.getElementsByClassName('menu-item')) {
+    menuItem.addEventListener('click', () => {
+      switchActive(menuBtn, menuContent);
     });
   }
 }
 
 /**
- * スクロール位置で背景を変える
+ * menuBtn をクリックでナビバーを開閉
  */
-const onScrollChangeBackGround = () => {
-  let scrolled = true;
-  window.addEventListener('scroll', () => {
-    if (scrolled) {
-      scrolled = false;
+const onClickSwitchNavbar = () => {
+  const menuBtn = document.getElementById('menu_btn');
+  const menuContent = document.getElementById('menu_content');
 
-      window.setTimeout(function () {
-        const discography = document.getElementById('discography');
-        const discoRect = discography.getClientRects()[0];
-        discography.style.opacity = (discoRect.bottom / discoRect.height).toString();
-
-        scrolled = true;
-      }, 200);
-    }
+  menuBtn.addEventListener('click', () => {
+    switchActive(menuBtn, menuContent);
   });
+
+  onClickCloseNavbar(menuBtn, menuContent);
 }
 
-onScrollChangeBackGround();
 onClickSwitchNavbar();
