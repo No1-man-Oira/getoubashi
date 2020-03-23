@@ -8,45 +8,37 @@
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/parts/header.css">
+  <link rel="stylesheet" type="text/css" href="./css/parts/music-section.css">
   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 </head>
 <body>
   <!-- wrapper -->
   <div id="wrapper">
     <!-- header -->
-    <nav class="navbar" id="header"></nav>
+    <header id="header">
+      <script src="js/parts/header.js"></script>
+    </header>
     <!-- top -->
-    <section class="hero is-fullheight" id="top">
-      <div class="hero-body">
-        <a href="#discography">
-          <h1 class="logo title has-text-white">Ge<br>tou<br>bashi</h1>
+    <section class="contents-section" id="top">
+      <div class="contents-body">
+        <a href="#music">
+          <h1 class="logo title has-text-white">
+            <p>Ge</p>
+            <p>tou</p>
+            <p>bashi</p>
+          </h1>
         </a>
       </div>
     </section>
-    <!-- discography -->
-    <section class="hero is-fullheight" id="discography">
-      <div class="hero-body">
-        <div id="musicplayer" class="container has-text-centered music">
-          <h1 class="title has-text-white content2h1" id="discography-title">MUSIC</h1>
-          <div id="track-name-area">
-            <label id="track-name">幻想大陸</label>
-          </div>
-          <img class="trackImg" id="trackImg" src="https://i1.sndcdn.com/artworks-yHdscZQmT8gOiBwz-ehZRvQ-t500x500.jpg">
-          <i class="material-icons is-pulled-left" id="skip-previous">skip_previous</i>
-          <i class="material-icons is-pulled-left" id="skip-next">skip_next</i>
-          <section class="section" id="player">
-            <audio id="track" src="./track/01_幻想大陸.mp3" controls></audio>
-          </section>
-        </div>
-      </div>
+    <!-- music-section -->
+    <section class="contents-section" id="music">
+      <script src="js/parts/music-section.js"></script>
     </section>
     <!-- biography -->
-    <section class="hero is-fullheight" id="biography">
+    <section class="contents-section" id="biography">
     </section>
   </div>
-  <div id="modal-div"></div>
 </body>
 <script src="js/trackList.js"></script>
-<script src="js/parts/navbar.js"></script>
-<script src="js/event.js"></script>
 </html>
