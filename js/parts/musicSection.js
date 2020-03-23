@@ -22,7 +22,7 @@ const track = (color, url) => {
     <iframe id="sc-widget" class="track" width="500" height="400" scrolling="no" frameborder="no" allow="autoplay"
       src="https://w.soundcloud.com/player/?url=${url}${options}">
     </iframe>
-  `
+  `;
 }
 
 /**
@@ -34,7 +34,6 @@ const setInitialVolume = (widget) => {
     console.log(callback);
   });
 }
-
 
 /**
 * スクロール位置で背景を変える

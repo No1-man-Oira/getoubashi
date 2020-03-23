@@ -108,14 +108,14 @@
 }
 
 #menu_content .menu_wrapper ul#menu li {
-  margin: 50px 0;
+  margin: 70px 0;
   position: relative;
 }
 
 #menu_content .menu_wrapper ul#menu li a {
   display: inline-block;
   color: #fff;
-  font-size: 38px;
+  font-size: 70px;
   text-decoration: none;
   letter-spacing: 3px;
   line-height: 1;

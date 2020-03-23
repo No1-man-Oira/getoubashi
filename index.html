@@ -4,12 +4,12 @@
   <meta http-equiv="content-type" charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" rel="stylesheet" >
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <link rel="stylesheet" type="text/css" href="./css/parts/header.css">
-  <link rel="stylesheet" type="text/css" href="./css/parts/music-section.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/parts/top.css" rel="stylesheet" type="text/css">
+  <link href="css/parts/header.css" rel="stylesheet" type="text/css">
+  <link href="css/parts/musicSection.css" rel="stylesheet" type="text/css">
   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 </head>
 <body>
@@ -21,19 +21,11 @@
     </header>
     <!-- top -->
     <section class="contents-section" id="top">
-      <div class="contents-body">
-        <a href="#music">
-          <h1 class="logo title has-text-white">
-            <p>Ge</p>
-            <p>tou</p>
-            <p>bashi</p>
-          </h1>
-        </a>
-      </div>
+      <script src="js/parts/top.js"></script>
     </section>
-    <!-- music-section -->
+    <!-- music -->
     <section class="contents-section" id="music">
-      <script src="js/parts/music-section.js"></script>
+      <script src="js/parts/musicSection.js"></script>
     </section>
     <!-- biography -->
     <section class="contents-section" id="biography">
