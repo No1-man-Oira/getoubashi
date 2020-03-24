@@ -65,7 +65,7 @@
 }
 
 /* mobile */
-@media screen and (max-width: 767px), (max-height: 400px)  {
+@media screen and (max-width: 767px), (max-height: 400px) {
   #skip-previous, #skip-next {
     font-size: 60px;
   }
@@ -86,7 +86,7 @@
   }
 }
 
-@media screen and (max-height: 400px)  {
+@media screen and (max-height: 400px) {
   iframe {
     width: 200px;
     height: 200px;
