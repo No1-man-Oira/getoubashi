@@ -48,10 +48,6 @@
   top: 50%;
 }
 
-.track {
-/* なんもない😇 */
-}
-
 #skip-previous, #skip-next {
   position: absolute;
   color: white;
@@ -66,4 +62,45 @@
 
 #skip-next {
   right: 0;
+}
+
+/* mobile */
+@media screen and (max-width: 767px), (max-height: 400px)  {
+  #skip-previous, #skip-next {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  iframe {
+    width: 250px;
+    height: 250px;
+  }
+
+  #music-section-title {
+    font-size: 4rem;
+  }
+
+  .contents {
+    top: 40%;
+  }
+}
+
+@media screen and (max-height: 400px)  {
+  iframe {
+    width: 200px;
+    height: 200px;
+  }
+
+  #music-section-title {
+    font-size: 2rem;
+  }
+
+  #skip-previous, #skip-next {
+    margin: 0px 80px;
+  }
+
+  .contents {
+    top: 30%;
+  }
 }
